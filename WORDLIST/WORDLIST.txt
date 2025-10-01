@@ -1,0 +1,2 @@
+echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
+echo -e "123456\npassword\nqwerty\nmsfadmin" pass.txt

